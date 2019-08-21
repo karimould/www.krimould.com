@@ -46,7 +46,7 @@ const IndexPage = ({ pageContext: { locale }, ...props }: IndexProps): ReactElem
   const { edges: posts } = props.data.blogPosts
   return (
     <Layout locale={locale}>
-      <h1>title: {data.frontmatter.title}</h1>
+      {/* <h1>title: {data.frontmatter.title}</h1>
       <p>Content: {data.frontmatter.text}</p>
       <p>Locale: {locale}</p>
       <h2>{i18n[locale].text}</h2>
@@ -64,8 +64,8 @@ const IndexPage = ({ pageContext: { locale }, ...props }: IndexProps): ReactElem
               Link to blog post
             </Link>
           </div>
-        ),
-      )}
+        )
+      )} */}
     </Layout>
   )
 }
