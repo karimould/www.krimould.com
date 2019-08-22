@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/layouts/main/Layout'
-import { i18n } from '../constants/i18n'
+import Vim from '../components/shared/vim/Vim'
 
 interface HomepageData {
   fields: {
@@ -46,6 +46,7 @@ const IndexPage = ({ pageContext: { locale }, ...props }: IndexProps): ReactElem
   const { edges: posts } = props.data.blogPosts
   return (
     <Layout locale={locale}>
+      <Vim black locale={locale} />
       {/* <h1>title: {data.frontmatter.title}</h1>
       <p>Content: {data.frontmatter.text}</p>
       <p>Locale: {locale}</p>

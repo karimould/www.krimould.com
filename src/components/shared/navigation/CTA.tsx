@@ -43,7 +43,7 @@ const CTA = ({ locale }: CTAProps): JSX.Element => {
 
 const NoHoverCTA = ({ locale }: CTAProps): JSX.Element => {
   return (
-    <div className="hire-me pl-5">
+    <div className="hire-me">
       <p>FREE</p>
       <p>FOR</p>
       <p>FREELANCE</p>
