@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layouts/main/Layout'
 import Vim from '../components/shared/vim/Vim'
+import Timeline from '../components/home/timeline/Timeline';
 
 interface HomepageData {
   fields: {
@@ -47,6 +48,9 @@ const IndexPage = ({ pageContext: { locale }, ...props }: IndexProps): ReactElem
   return (
     <Layout locale={locale}>
       <Vim black locale={locale} />
+      <Timeline locale={locale} />
+      <Timeline locale={locale} />
+      <Timeline locale={locale} />
       {/* <h1>title: {data.frontmatter.title}</h1>
       <p>Content: {data.frontmatter.text}</p>
       <p>Locale: {locale}</p>

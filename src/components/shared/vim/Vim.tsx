@@ -9,7 +9,7 @@ interface VimProps {
 const Vim = ({ locale, black }: VimProps): JSX.Element => {
   return (
     <div className="container-normal">
-      <div className={`w-3/4 p-3 mt-64 ${black ? 'text-white bg-black' : ''} font-mono rounded-lg`}>
+      <div className={`p-3 mt-64 ${black ? 'text-white bg-black' : ''} font-mono rounded-lg`}>
         <div className="flex flex-row">
           <div className="w-4 h-4 bg-red-600 mr-2 rounded-full" />
           <div className="w-4 h-4 bg-gray-600 mr-2 rounded-full" />
