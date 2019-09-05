@@ -15,24 +15,8 @@ const TimelineElement = ({ locale }: TimeLineElementProps): JSX.Element => {
         <p>🎓</p>
       </div>
       <div>
-        <p className="text-1xl text-center">
-          BACHELOR
-          <br />
-          DEGRESS
-          <br />
-          COMPUTER
-          <br />
-          SIENCE
-          <br />
-          AND
-          <br />
-          ECONIMICS
-          <br />
-          UNIVERSITY
-          <br />
-          OF
-          <br />
-          HILDESHEIM
+        <p className="text-1xl text-center word-break">
+          BACHELOR DEGRESS COMPUTER SIENCE AND ECONIMICS UNIVERSITY OF HILDESHEIM
         </p>
       </div>
     </div>

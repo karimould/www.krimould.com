@@ -12,9 +12,10 @@ interface Props {
   imageName: string
   maxWidth?: number
   className?: string
+  center?: boolean
 }
 
-const Image = ({ imageName, maxWidth = 500, className = '' }: Props) => (
+const Image = ({ center = false, imageName, maxWidth = 500, className = '' }: Props) => (
   <StaticQuery
     query={graphql`
       query {
@@ -38,7 +39,7 @@ const Image = ({ imageName, maxWidth = 500, className = '' }: Props) => (
         return null
       }
       return (
-        <div style={{ maxWidth: maxWidth }}>
+        <div style={{ margin: center ? '0 auto' : null, maxWidth: maxWidth }}>
           <Img className={className} fluid={image.node.fluid} />
         </div>
       )

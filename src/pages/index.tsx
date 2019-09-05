@@ -2,7 +2,12 @@ import React, { ReactElement } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layouts/main/Layout'
 import Vim from '../components/shared/vim/Vim'
-import Timeline from '../components/home/timeline/Timeline';
+import Separator from '../components/shared/separator/Separator'
+import Text from '../components/shared/text/Text'
+import List from '../components/shared/list/List'
+import Timeline from '../components/home/timeline/Timeline'
+import ProjectsContainer from '../components/home/projects/ProjectsContainer'
+import { i18n } from '../constants/i18n'
 
 interface HomepageData {
   fields: {
@@ -47,10 +52,30 @@ const IndexPage = ({ pageContext: { locale }, ...props }: IndexProps): ReactElem
   const { edges: posts } = props.data.blogPosts
   return (
     <Layout locale={locale}>
+      <Separator distance="large" />
       <Vim black locale={locale} />
+      <Separator distance="large" />
+      <Text>CV</Text>
       <Timeline locale={locale} />
-      <Timeline locale={locale} />
-      <Timeline locale={locale} />
+      <Separator distance="large" />
+      <Text>PROJECTS</Text>
+      <Separator distance="small" />
+      <ProjectsContainer locale={locale} />
+      <Separator distance="large" />
+      <Text preLine locale={locale}>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet
+      </Text>
+      <div className="container-normal flex">
+        {i18n[locale].techList.map(
+          (list, index): JSX.Element => (
+            <List key={index} heading={list.heading} techList={list.listData} />
+          ),
+        )}
+      </div>
+      <Separator distance="large" />
+
       {/* <h1>title: {data.frontmatter.title}</h1>
       <p>Content: {data.frontmatter.text}</p>
       <p>Locale: {locale}</p>

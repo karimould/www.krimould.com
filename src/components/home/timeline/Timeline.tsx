@@ -2,11 +2,11 @@ import React from 'react'
 import './timeline.scss'
 import TimelineElement from './TimelineElement'
 
-interface TimeLineprops {
+interface TimeLineProps {
   locale: string
 }
 
-const Timeline = ({ locale }: TimeLineprops): JSX.Element => {
+const Timeline = ({ locale }: TimeLineProps): JSX.Element => {
   const elems = []
 
   for (var i = 0; i < 6; i++) {
@@ -15,7 +15,7 @@ const Timeline = ({ locale }: TimeLineprops): JSX.Element => {
 
   return (
     <div className="container-normal">
-      <div className="timeline-container mt-64 border-t-2 border-black overflow-x-auto">
+      <div className="timeline-container border-t-2 border-black overflow-x-auto">
         <div className="flex">{elems}</div>
       </div>
       <div className="mt-10">
