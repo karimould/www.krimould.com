@@ -7,6 +7,8 @@ import Text from '../components/shared/text/Text'
 import List from '../components/shared/list/List'
 import Timeline from '../components/home/timeline/Timeline'
 import ProjectsContainer from '../components/home/projects/ProjectsContainer'
+import Opensource from '../components/home/opensource/Opensource'
+import SEO from '../components/util/seo/SEO'
 import { i18n } from '../constants/i18n'
 
 interface HomepageData {
@@ -17,41 +19,16 @@ interface HomepageData {
     pageKey: string
     seo_title: string
     seo_desc: string
-    title: string
-    text: string
-  }
-}
-
-interface BlogPosts {
-  node: {
-    fields: {
-      slug: string
-    }
-    frontmatter: {
-      title: string
-      description: string
-      date: string
-    }
-  }
-}
-
-interface IndexProps {
-  pageContext: {
-    [locale: string]: string
-  }
-  data: {
-    homePageData: HomepageData
-    blogPosts: {
-      edges: BlogPosts[]
-    }
   }
 }
 
 const IndexPage = ({ pageContext: { locale }, ...props }: IndexProps): ReactElement => {
-  const { homePageData: data } = props.data
-  const { edges: posts } = props.data.blogPosts
+  const { homepageData: data } = props.data
+  const { edges: opensourceProjects } = props.data.openSource
+
   return (
     <Layout locale={locale}>
+      <SEO lang={locale} metaDescription={data.frontmatter.seo_desc} title={data.frontmatter.seo_title} />
       <Separator distance="large" />
       <Vim black locale={locale} />
       <Separator distance="large" />
@@ -62,6 +39,8 @@ const IndexPage = ({ pageContext: { locale }, ...props }: IndexProps): ReactElem
       <Separator distance="small" />
       <ProjectsContainer locale={locale} />
       <Separator distance="large" />
+      <Text>TECH I WORKED WITH</Text>
+      <Separator distance="small" />
       <Text preLine locale={locale}>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
         dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
@@ -75,27 +54,16 @@ const IndexPage = ({ pageContext: { locale }, ...props }: IndexProps): ReactElem
         )}
       </div>
       <Separator distance="large" />
-
-      {/* <h1>title: {data.frontmatter.title}</h1>
-      <p>Content: {data.frontmatter.text}</p>
-      <p>Locale: {locale}</p>
-      <h2>{i18n[locale].text}</h2>
-      <Link to={locale === 'en' ? '/de' : '/'}>
-        <p>Change language</p>
-      </Link>
-      <h2>BlogPosts:</h2>
-      {posts.map(
-        ({ node: post }, i): JSX.Element => (
-          <div key={i}>
-            <h3>Blog Post Title: {post.frontmatter.title}</h3>
-            <p>Blog Post Description: {post.frontmatter.description}</p>
-            <p>Blog Post Date: {post.frontmatter.date}</p>
-            <Link to={post.fields.slug} title="link to blog post">
-              Link to blog post
-            </Link>
-          </div>
-        )
-      )} */}
+      <Text>TECH I WORKED WITH</Text>
+      <Separator distance="small" />
+      <Text preLine locale={locale}>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet
+      </Text>
+      <Separator distance="small" />
+      <Opensource projects={opensourceProjects} />
+      <Separator distance="large" />
     </Layout>
   )
 }
@@ -104,7 +72,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query HomeContent($locale: String) {
-    homePageData: markdownRemark(frontmatter: { pageKey: { eq: "page_home" }, locale: { eq: $locale } }) {
+    homepageData: markdownRemark(frontmatter: { pageKey: { eq: "page_home" }, locale: { eq: $locale } }) {
       fields {
         slug
       }
@@ -112,22 +80,17 @@ export const pageQuery = graphql`
         pageKey
         seo_title
         seo_desc
-        title
-        text
       }
     }
-    blogPosts: allMarkdownRemark(
-      filter: { frontmatter: { pageKey: { eq: "page_blogpost" }, locale: { eq: $locale } } }
-    ) {
+    openSource: allMarkdownRemark(filter: { frontmatter: { pageKey: { eq: "opensource" } } }) {
       edges {
         node {
-          fields {
-            slug
-          }
+          id
+          fileAbsolutePath
           frontmatter {
             title
-            description
-            date
+            link
+            tags
           }
         }
       }
