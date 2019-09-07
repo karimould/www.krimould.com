@@ -7,7 +7,8 @@ interface ProjectProps {
   tags: string[]
 }
 
-const Project = ({ title, link, tags }: ProjectPros): JSX.Element => {
+//
+const Project = ({ title, link, tags }: ProjectProps): JSX.Element => {
   return (
     <div className="w-2/6 bg-black text-white p-5 mr-5">
       <div className="float-right os-img">
