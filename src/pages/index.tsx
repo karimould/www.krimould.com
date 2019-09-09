@@ -32,14 +32,14 @@ const IndexPage = ({ pageContext: { locale }, ...props }: IndexProps): ReactElem
       <Separator distance="large" />
       <Vim black locale={locale} />
       <Separator distance="large" />
-      <Text>CV</Text>
+      <Text locale={locale}>CV</Text>
       <Timeline locale={locale} />
       <Separator distance="large" />
-      <Text>PROJECTS</Text>
+      <Text locale={locale}>PROJECTS</Text>
       <Separator distance="small" />
       <ProjectsContainer locale={locale} />
       <Separator distance="large" />
-      <Text>TECH I WORKED WITH</Text>
+      <Text locale={locale}>TECH I WORKED WITH</Text>
       <Separator distance="small" />
       <Text preLine locale={locale}>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
@@ -54,7 +54,7 @@ const IndexPage = ({ pageContext: { locale }, ...props }: IndexProps): ReactElem
         )}
       </div>
       <Separator distance="large" />
-      <Text>TECH I WORKED WITH</Text>
+      <Text locale={locale}>TECH I WORKED WITH</Text>
       <Separator distance="small" />
       <Text preLine locale={locale}>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
