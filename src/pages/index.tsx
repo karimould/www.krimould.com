@@ -12,6 +12,7 @@ import SEO from '../components/util/seo/SEO'
 import { i18n } from '../constants/i18n'
 
 interface HomepageData {
+  locale: string
   fields: {
     slug: string
   }
@@ -48,7 +49,7 @@ const IndexPage = ({ pageContext: { locale }, ...props }: IndexProps): ReactElem
       </Text>
       <div className="container-normal flex">
         {i18n[locale].techList.map(
-          (list, index): JSX.Element => (
+          (list: any, index: number): JSX.Element => (
             <List key={index} heading={list.heading} techList={list.listData} />
           ),
         )}
