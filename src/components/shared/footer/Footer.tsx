@@ -34,13 +34,47 @@ const Footer = ({ locale, path }: FooterProps): JSX.Element => {
           </ul>
         </div>
         <div className="w-2/6">
-          <h1>KARIM</h1>
+          <ul>
+            <li>
+              <a href="www.krimould.com" title="to github page">
+                HOME
+              </a>
+            </li>
+            <li>
+              <a href="www.krimould.com" title="to github page">
+                BLOG
+              </a>
+            </li>
+            <li>
+              <a href="www.krimould.com" title="to github page">
+                DIGITAL-GARDEN
+              </a>
+            </li>
+            <li>
+              <a href="www.krimould.com" title="to github page">
+                IMPRINT
+              </a>
+            </li>
+            <li>
+              <a href="www.krimould.com" title="to github page">
+                PRIVACY
+              </a>
+            </li>
+          </ul>
         </div>
         <div className="w-2/6">
-          <h1>KARIM</h1>
-        </div>
-        <div className="w-2/6">
-          <h1>KARIM</h1>
+          <ul>
+            <li>
+              <a href="www.krimould.com" title="to github page">
+                FORK PORTFOLIO
+              </a>
+            </li>
+            <li>
+              <a href="www.krimould.com" title="to github page">
+                WWW.IMMAJUNG.COM
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
