@@ -20,11 +20,7 @@ const Text = ({ locale, children, center, preLine }: TextProps): JSX.Element => 
     return classNames.join(' ')
   }
 
-  return (
-    <div className="container-normal">
-      <p className={`${getClassNames(center, preLine)}`}>{children}</p>
-    </div>
-  )
+  return <p className={`${getClassNames(center, preLine)}`}>{children}</p>
 }
 
 export default Text

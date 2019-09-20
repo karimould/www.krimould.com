@@ -1,5 +1,35 @@
 nav {
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
 
+  button {
+    z-index: 100;
+  }
+
+
+  .navMenu {
+    position: absolute;
+    transform-origin: 0% 0%;
+    transform: translate(500%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    overflow-y: none;
+    z-index: 1;
+    background: white;
+    width: 300px;
+
+    li {
+      padding: 5px 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .openMenu {
+    transform: none;
+  }
 
   .cta-wrapper {
     width: 100px;

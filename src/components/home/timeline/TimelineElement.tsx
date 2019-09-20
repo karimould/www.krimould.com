@@ -3,11 +3,12 @@ import './timeline.scss'
 
 interface TimeLineElementProps {
   locale: string
+  index: number
 }
 
-const TimelineElement = ({ locale }: TimeLineElementProps): JSX.Element => {
+const TimelineElement = ({ locale, index }: TimeLineElementProps): JSX.Element => {
   return (
-    <div className="timeline-element border-r-2 border-black mt-5 mr-5">
+    <div id={'timeline-element-' + index} className="timeline-element border-r-2 border-black mt-5 mr-5">
       <div className="heading font-bold text-2xl text-center">
         <p>OCT / 17</p>
       </div>

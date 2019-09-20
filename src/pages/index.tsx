@@ -10,9 +10,12 @@ import ProjectsContainer from '../components/home/projects/ProjectsContainer'
 import Opensource from '../components/home/opensource/Opensource'
 import SEO from '../components/util/seo/SEO'
 import { i18n } from '../constants/i18n'
+import ContactForm from '../components/shared/contact/Form'
 
 interface HomepageData {
-  locale: string
+  pageContext: {
+    locale: string
+  }
   fields: {
     slug: string
   }
@@ -23,7 +26,7 @@ interface HomepageData {
   }
 }
 
-const IndexPage = ({ pageContext: { locale }, ...props }: IndexProps): ReactElement => {
+const IndexPage = ({ pageContext: { locale }, ...props }: HomepageData): ReactElement => {
   const { homepageData: data } = props.data
   const { edges: opensourceProjects } = props.data.openSource
 
@@ -47,7 +50,7 @@ const IndexPage = ({ pageContext: { locale }, ...props }: IndexProps): ReactElem
         dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
         clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet
       </Text>
-      <div className="container-normal flex">
+      <div className="flex">
         {i18n[locale].techList.map(
           (list: any, index: number): JSX.Element => (
             <List key={index} heading={list.heading} techList={list.listData} />
@@ -65,6 +68,25 @@ const IndexPage = ({ pageContext: { locale }, ...props }: IndexProps): ReactElem
       <Separator distance="small" />
       <Opensource projects={opensourceProjects} />
       <Separator distance="large" />
+      <Text preLine locale={locale}>
+        CONTACT ME
+        <br />
+        <br />
+        FREE FOR FREELANCE WORK REMOTE AND IN EUROPE KOMM KLAR.
+      </Text>
+      <Separator distance="small" />
+      <div className="flex">
+        <div className="w-2/3">
+          <ContactForm />
+        </div>
+        <div className="w-1/3">
+          <Text preLine locale={locale}>
+            YOU CAN SEND ME A QUICK EMAIL IF YOU DONT WANT TO FILL OUT  THIS FORMULAR. JUST DROP ME A LINE AT
+            karim_om@me.com
+          </Text>
+        </div>
+      </div>
+      <Separator distance="medium" />
     </Layout>
   )
 }

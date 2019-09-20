@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import CTA from './CTA'
+import Menu from './Menu'
 import './navigation.scss'
 
 interface NavigationProps {
@@ -15,11 +17,11 @@ const Navigation = ({ locale, path }: NavigationProps): JSX.Element => {
           <CTA locale={locale} />
         </div>
         <div className="w-1/3 text-center">
-          <h1>EN / DE</h1>
+          <Link to="/">EN</Link> / <Link to="/de">DE</Link>
         </div>
         <div className="w-1/3">
           <div className="float-right">
-            <h1>MENU</h1>
+            <Menu locale={locale} />
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ interface FooterProps {
 const Footer = ({ locale, path }: FooterProps): JSX.Element => {
   return (
     <footer className="container-normal border-t-2 border-black">
-      <div className="flex mt-6">
+      <div className="flex mt-6 mb-6">
         <div className="w-2/6">
           <ul>
             <li>
