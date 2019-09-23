@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { useOnClickOutside } from '../../../hooks/hooks'
 interface CTAProps {
   locale: string
 }
@@ -7,19 +7,26 @@ interface CTAProps {
 interface CTAFormProps {
   locale: string
   isClicked: boolean
+  outsideClick: any
 }
 
 const CTA = ({ locale }: CTAProps): JSX.Element => {
   const [isHovered, setHoveredStatus] = useState(false)
   const [isClicked, setClickStatus] = useState(false)
+  //for the useOnClickOutside hook
+  const [isDisabled, setIsDisabled] = useState(true)
 
   function openModal(): void {
+    setIsDisabled(false)
     !isClicked ? setClickStatus(true) : null
   }
 
-  function closeModal(): void {
+  const closeModal = (): void => {
+    setIsDisabled(true)
     setClickStatus(false)
   }
+
+  const outsideElement = useOnClickOutside(closeModal, isDisabled)
 
   return (
     <div
@@ -36,7 +43,7 @@ const CTA = ({ locale }: CTAProps): JSX.Element => {
         </div>
       ) : null}
       {isHovered ? <HoverCTA locale={locale} /> : <NoHoverCTA locale={locale} />}
-      {isClicked ? <ClickCTA locale={locale} isClicked={isClicked} /> : ''}
+      {isClicked ? <ClickCTA outsideClick={outsideElement} locale={locale} isClicked={isClicked} /> : ''}
     </div>
   )
 }
@@ -60,7 +67,7 @@ const HoverCTA = ({ locale }: CTAProps): JSX.Element => {
   )
 }
 
-const ClickCTA = ({ locale, isClicked }: CTAFormProps): JSX.Element => {
+const ClickCTA = ({ locale, isClicked, outsideClick }: CTAFormProps): JSX.Element => {
   const [animationState, setAnimationState] = useState({
     w: 0,
     h: 100,
@@ -86,13 +93,13 @@ const ClickCTA = ({ locale, isClicked }: CTAFormProps): JSX.Element => {
   function submitHandler(e: React.FormEvent): void {
     e.preventDefault()
   }
-
   isClicked ? startAnimation() : null
 
   return (
     <div
       className={`cta-modal-container absolute top-0 left-0 bg-black ${isClicked ? 'block' : 'hidden'}`}
       style={{ width: w, height: h }}
+      ref={outsideClick}
     >
       <div className="cta-form-container relative w-full text-white" style={{ opacity: opacity }}>
         <div className="form pt-16">

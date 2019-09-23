@@ -7,6 +7,7 @@ interface MenuProps {
 
 const Menu = ({ locale }: MenuProps): JSX.Element => {
   const [isOpen, setOpen] = useState({ isMenuOpen: false, menuText: 'MENU' })
+  //for the useOnClickOutside hook
 
   const checkMenu = (): void => {
     !isOpen.isMenuOpen

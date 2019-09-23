@@ -11,7 +11,7 @@ interface NavigationProps {
 
 const Navigation = ({ locale, path }: NavigationProps): JSX.Element => {
   return (
-    <nav className="fixed w-full pt-10 z-10 top-0">
+    <nav className="fixed w-full pt-5 z-10 top-0">
       <div className="nav-wrapper flex justify-between p-0 container-normal relative">
         <div className="w-1/3">
           <CTA locale={locale} />
