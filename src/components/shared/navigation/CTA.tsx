@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
 import { useOnClickOutside } from '../../../hooks/hooks'
+
+/*
+ * ToDo: clean code up
+ *
+ */
+
 interface CTAProps {
   locale: string
 }

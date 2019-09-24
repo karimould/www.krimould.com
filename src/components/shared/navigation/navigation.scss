@@ -2,17 +2,16 @@ nav {
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
-
+  transition: top 1s cubic-bezier(0.77, 0.2, 0.05, 1);
   button {
     z-index: 100;
   }
-
 
   .navMenu {
     position: absolute;
     transform-origin: 0% 0%;
     transform: translate(500%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     overflow-y: none;
     z-index: 1;
     background: white;

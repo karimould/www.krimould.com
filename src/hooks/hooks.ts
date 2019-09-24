@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 /*
  * ToDo:
@@ -8,6 +8,26 @@ import { useEffect, useRef } from 'react'
 
 interface RefObject {
   readonly current: HTMLDivElement | undefined
+}
+
+export const useScrollDirection = (): string => {
+  const [lastScrollPosition, setLastScrollPosition] = useState(0)
+  const [bodyOffset, setBodyOffset] = useState(document.body.getBoundingClientRect())
+  const [scrollDirection, setScrollDirection] = useState('NONE')
+
+  const listener = () => {
+    setBodyOffset(document.body.getBoundingClientRect())
+    setScrollDirection(lastScrollPosition > -bodyOffset.top ? 'UP' : 'DOWN')
+    setLastScrollPosition(-bodyOffset.top)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', listener)
+    return () => {
+      window.removeEventListener('scroll', listener)
+    }
+  })
+  return scrollDirection
 }
 
 export const useOnClickOutside = (onClick: Function, disabled: boolean): RefObject => {
