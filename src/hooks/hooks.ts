@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from 'react'
  * ToDo:
  * - retrun types
  * - Object is possibly 'undefined' line 17
- *
  */
 
 interface RefObject {
