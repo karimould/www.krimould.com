@@ -15,7 +15,7 @@ interface ProjectProps {
 
 const OpensourceContainer = ({ projects }: OpensourceProps): JSX.Element => {
   return (
-    <div className="container-normal flex">
+    <div className="container-normal md:flex">
       {projects.map(
         (tag, index): JSX.Element => (
           <Project

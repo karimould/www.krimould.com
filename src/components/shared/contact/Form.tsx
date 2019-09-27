@@ -6,7 +6,7 @@ const ContactForm = (): JSX.Element => {
   }
 
   return (
-    <form className="pr-20" onSubmit={submitHandler}>
+    <form className="md:pr-20" onSubmit={submitHandler}>
       <label htmlFor="fname">Name</label>
       <br />
       <input

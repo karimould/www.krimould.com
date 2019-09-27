@@ -50,7 +50,7 @@ const IndexPage = ({ pageContext: { locale }, ...props }: HomepageData): ReactEl
         dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
         clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet
       </Text>
-      <div className="flex">
+      <div className="flex flex-wrap">
         {i18n[locale].techList.map(
           (list: any, index: number): JSX.Element => (
             <List key={index} heading={list.heading} techList={list.listData} />
@@ -75,11 +75,11 @@ const IndexPage = ({ pageContext: { locale }, ...props }: HomepageData): ReactEl
         FREE FOR FREELANCE WORK REMOTE AND IN EUROPE KOMM KLAR.
       </Text>
       <Separator distance="small" />
-      <div className="flex">
-        <div className="w-2/3">
+      <div className="md:flex-row flex flex-col-reverse">
+        <div className="md:w-2/3 w-full">
           <ContactForm />
         </div>
-        <div className="w-1/3">
+        <div className="md:w-1/3 w-full">
           <Text preLine locale={locale}>
             YOU CAN SEND ME A QUICK EMAIL IF YOU DONT WANT TO FILL OUT  THIS FORMULAR. JUST DROP ME A LINE AT
             karim_om@me.com

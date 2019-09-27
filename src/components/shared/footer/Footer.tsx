@@ -8,8 +8,8 @@ interface FooterProps {
 const Footer = ({ locale, path }: FooterProps): JSX.Element => {
   return (
     <footer className="container-normal border-t-2 border-black">
-      <div className="flex mt-6 mb-6">
-        <div className="w-2/6">
+      <div className="flex flex-wrap mt-6 mb-6">
+        <div className="w-full mt-3 md:w-2/6">
           <ul>
             <li>
               <a href="www.krimould.com" title="to github page">
@@ -33,7 +33,7 @@ const Footer = ({ locale, path }: FooterProps): JSX.Element => {
             </li>
           </ul>
         </div>
-        <div className="w-2/6">
+        <div className="w-full mt-3 md:w-2/6">
           <ul>
             <li>
               <a href="www.krimould.com" title="to github page">
@@ -62,7 +62,7 @@ const Footer = ({ locale, path }: FooterProps): JSX.Element => {
             </li>
           </ul>
         </div>
-        <div className="w-2/6">
+        <div className="w-full mt-3 md:w-2/6">
           <ul>
             <li>
               <a href="www.krimould.com" title="to github page">

@@ -7,7 +7,7 @@ interface ListProps {
 
 const List = ({ heading, techList }: ListProps): JSX.Element => {
   return (
-    <div className="mt-5 w-1/5">
+    <div className="mt-5 w-6/12 md:w-1/5">
       <h3 className="font-extrabold tracking-widest">{heading}</h3>
       <ul>
         {techList.map(
