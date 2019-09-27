@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
  * ToDo:
  * - retrun types
  * - Object is possibly 'undefined' line 17
+ * - line 16
  */
 
 interface RefObject {
@@ -12,7 +13,10 @@ interface RefObject {
 
 export const useScrollDirection = (): string => {
   const [lastScrollPosition, setLastScrollPosition] = useState(0)
-  const [bodyOffset, setBodyOffset] = useState(document.body.getBoundingClientRect())
+  //check typeof document for gatsby build -> find better solution
+  const [bodyOffset, setBodyOffset] = useState(
+    typeof document !== 'undefined' ? document.body.getBoundingClientRect() : { top: 0 },
+  )
   const [scrollDirection, setScrollDirection] = useState('NONE')
 
   const listener = () => {
