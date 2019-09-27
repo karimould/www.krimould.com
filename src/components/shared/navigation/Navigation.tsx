@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'gatsby'
 import CTA from './CTA'
 import Menu from './Menu'
@@ -12,7 +12,6 @@ interface NavigationProps {
 
 const Navigation = ({ locale, path }: NavigationProps): JSX.Element => {
   const scrollDirection: string = useScrollDirection()
-
   return (
     <nav
       className="fixed w-full pt-5 z-10 bg-white"

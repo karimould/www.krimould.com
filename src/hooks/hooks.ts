@@ -22,9 +22,11 @@ export const useScrollDirection = (): string => {
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', listener)
-    return () => {
-      window.removeEventListener('scroll', listener)
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', listener)
+      return () => {
+        window.removeEventListener('scroll', listener)
+      }
     }
   })
   return scrollDirection
@@ -39,13 +41,15 @@ export const useOnClickOutside = (onClick: Function, disabled: boolean): RefObje
   }
 
   useEffect((): any => {
-    if (!disabled) {
-      window.addEventListener('click', checkForClick)
-      return (): void => {
+    if (typeof window !== 'undefined') {
+      if (!disabled) {
+        window.addEventListener('click', checkForClick)
+        return (): void => {
+          window.removeEventListener('click', checkForClick)
+        }
+      } else {
         window.removeEventListener('click', checkForClick)
       }
-    } else {
-      window.removeEventListener('click', checkForClick)
     }
   }, [disabled])
   return ref
