@@ -8,7 +8,7 @@ import List from '../components/shared/list/List'
 import Timeline from '../components/home/timeline/Timeline'
 import ProjectsContainer from '../components/home/projects/ProjectsContainer'
 import Opensource from '../components/home/opensource/Opensource'
-import SEO from '../components/util/seo/SEO'
+import SEO from '../components/util/seo/Seo'
 import { i18n } from '../constants/i18n'
 import ContactForm from '../components/shared/contact/Form'
 
