@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import './layout.scss'
-import Navigation from '../../shared/navigation/navigation'
+import Navigation from '../../shared/navigation/Navigation'
 import Footer from '../../shared/footer/Footer'
 
 interface Props {
