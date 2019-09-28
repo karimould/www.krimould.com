@@ -15,14 +15,16 @@ export const useScrollDirection = (): string => {
   const [lastScrollPosition, setLastScrollPosition] = useState(0)
   //check typeof document for gatsby build -> find better solution
   const [bodyOffset, setBodyOffset] = useState(
-    typeof document !== 'undefined' ? document.body.getBoundingClientRect() : { top: 0 },
+    typeof document !== 'undefined' ? document.body.getBoundingClientRect() : null,
   )
   const [scrollDirection, setScrollDirection] = useState('NONE')
 
   const listener = () => {
-    setBodyOffset(document.body.getBoundingClientRect())
-    setScrollDirection(lastScrollPosition > -bodyOffset.top ? 'UP' : 'DOWN')
-    setLastScrollPosition(-bodyOffset.top)
+    if (bodyOffset !== null) {
+      setBodyOffset(document.body.getBoundingClientRect())
+      setScrollDirection(lastScrollPosition > -bodyOffset.top ? 'UP' : 'DOWN')
+      setLastScrollPosition(-bodyOffset.top)
+    }
   }
 
   useEffect(() => {
