@@ -22,7 +22,7 @@ export const useScrollDirection = (): string => {
   const listener = () => {
     if (bodyOffset !== null) {
       setBodyOffset(document.body.getBoundingClientRect())
-      setScrollDirection(lastScrollPosition > -bodyOffset.top ? 'UP' : 'DOWN')
+      setScrollDirection(lastScrollPosition > -bodyOffset.top || bodyOffset.top >= 0 ? 'UP' : 'DOWN')
       setLastScrollPosition(-bodyOffset.top)
     }
   }
