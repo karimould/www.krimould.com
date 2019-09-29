@@ -36,13 +36,16 @@ const Project = ({ locale }: ProjectProps): JSX.Element => {
   return (
     <div className="project mt-12 w-10/12 mx-auto">
       <Image center className="mx-auto" imageName="test.png" maxWidth={1000} />
-      <div style={{ opacity: opacityDesc }} className="absolute w-64 p-5 bg-white word-break top-0 left-0 mt-64 ml-14">
+      <div
+        style={{ opacity: opacityDesc }}
+        className="md:absolute w-64 p-5 bg-white word-break top-0 left-0 md:mt-64 md:ml-14"
+      >
         <p>TECHNOLOGIES: REACT GATSBYJS NETLIFYCMS SNIPCART SERVERLESS FUNCTIONS</p>
       </div>
-      <div className="flex justify-between">
-        <div style={{ opacity: opacityLink }} className="bg-black text-white text-center p-5 w-40">
+      <div className="flex justify-center">
+        {/* <div style={{ opacity: opacityLink }} className="bg-black text-white text-center p-5 w-40">
           <p>MORE INFOS</p>
-        </div>
+        </div> */}
         <div style={{ opacity: opacityLink }} className="bg-black text-white text-center p-5 w-40">
           <p>VISIT SITE</p>
         </div>

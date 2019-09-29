@@ -10,7 +10,7 @@ const Separator = ({ distance }: SeparatorProps): JSX.Element => {
       return 'mt-5'
     }
     if (distance === 'medium') {
-      return 'mt-5 lg:mt-32'
+      return 'mt-32 lg:mt-32'
     }
     if (distance === 'large') {
       return 'mt-32 lg:mt-64'

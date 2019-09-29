@@ -8,4 +8,5 @@ tags:
   - TAILWIND
   - I18N
   - HOOKS
+  - GRAPHQL
 ---

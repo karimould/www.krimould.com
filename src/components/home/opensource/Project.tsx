@@ -19,7 +19,7 @@ const Project = ({ title, link, tags }: ProjectProps): JSX.Element => {
       <div className="word-break mt-16 min-height">
         <h4>{title}</h4>
       </div>
-      <div className="flex mt-10">
+      <div className="flex flex-wrap mt-10">
         {tags.map(
           (tag, index): JSX.Element => (
             <p key={index} className="mr-5">

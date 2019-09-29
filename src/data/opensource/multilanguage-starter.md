@@ -6,4 +6,5 @@ tags:
   - REACT
   - GATSBYJS
   - NETLIFYCMS
+  - GRAPHQL
 ---

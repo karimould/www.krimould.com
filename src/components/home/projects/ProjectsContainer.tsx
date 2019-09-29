@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Project from './Project'
+import handleXScroll from '../../../hooks/xScroll'
 import './projects.scss'
 
 interface ProjectProps {
@@ -8,7 +9,6 @@ interface ProjectProps {
 
 const ProjectsContainer = ({ locale }: ProjectProps): JSX.Element => {
   const [activeProject, changeActiveProject] = useState(0)
-
   const elems = []
 
   for (var i = 0; i < 6; i++) {
@@ -22,7 +22,7 @@ const ProjectsContainer = ({ locale }: ProjectProps): JSX.Element => {
   return (
     <div className="container-normal">
       <div className="relative">
-        <div className="projects-nav overflow-x-auto flex">
+        <div id="projects-scroll" className="projects-nav overflow-x-auto flex">
           <button onClick={(): void => changeActiveProject(0)} className={getActiveItemCSS(0)}>
             OTHER
           </button>
@@ -42,6 +42,9 @@ const ProjectsContainer = ({ locale }: ProjectProps): JSX.Element => {
             IKS-HANNOVER
           </button>
         </div>
+        <button onClick={(): void => handleXScroll('projects-scroll')} className="float-right text-3xl md:hidden">
+          →
+        </button>
         {elems[activeProject]}
       </div>
     </div>
