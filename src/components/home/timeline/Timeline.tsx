@@ -2,25 +2,39 @@ import React from 'react'
 import './timeline.scss'
 import TimelineElement from './TimelineElement'
 import handleXScroll from '../../../hooks/xScroll'
+import { i18n } from '../../../constants/i18n'
 
-interface TimeLineProps {
+interface TimelineProps {
   locale: string
 }
 
-const Timeline = ({ locale }: TimeLineProps): JSX.Element => {
-  const elems = []
+interface TimelineElement {
+  dateStart: string
+  dateEnd: string
+  emoji: string
+  text: string
+}
 
-  for (var i = 0; i < 6; i++) {
-    elems.push(<TimelineElement index={i} locale={locale} />)
-  }
-
+const Timeline = ({ locale }: TimelineProps): JSX.Element => {
   return (
     <div className="container-normal">
       <button onClick={(): void => handleXScroll('timeline-scroll')} className="float-right text-3xl">
         →
       </button>
       <div id="timeline-scroll" className="timeline-container border-t-2 border-black overflow-x-auto">
-        <div className="flex">{elems}</div>
+        <div className="flex">
+          {i18n[locale].timeline.map(
+            (element: TimelineElement, i: number): JSX.Element => (
+              <TimelineElement
+                dateStart={element.dateStart}
+                dateEnd={element.dateEnd}
+                emoji={element.emoji}
+                text={element.text}
+                index={i}
+              />
+            ),
+          )}
+        </div>
       </div>
       <div className="mt-10">
         <a>DOWNLOAD CV AS PDF</a>

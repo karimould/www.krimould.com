@@ -18,7 +18,7 @@ const Menu = ({ locale }: MenuProps): JSX.Element => {
   return (
     <div className="navContainer">
       <button onClick={checkMenu}>{isOpen.menuText}</button>
-      <ul className={`navMenu${isOpen.isMenuOpen ? ' openMenu' : ''}`}>
+      <ul className={`p-5 navMenu${isOpen.isMenuOpen ? ' openMenu' : ''}`}>
         <Link to="/">
           <li>
             <span className="term" />

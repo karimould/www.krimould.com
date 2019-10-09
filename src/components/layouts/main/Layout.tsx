@@ -12,7 +12,7 @@ const Layout = ({ children, locale }: Props): JSX.Element => {
   return (
     <>
       <Navigation locale={locale} />
-      <main className="container-normal">{children}</main>
+      <main className="container-normal uppercase">{children}</main>
       <Footer locale={locale} />
     </>
   )

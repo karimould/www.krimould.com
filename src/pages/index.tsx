@@ -19,16 +19,20 @@ interface HomepageData {
   fields: {
     slug: string
   }
-  frontmatter: {
-    pageKey: string
-    seo_title: string
-    seo_desc: string
+  data: {
+    frontmatter: {
+      pageKey: string
+      seo_title: string
+      seo_desc: string
+    }
   }
 }
 
 const IndexPage = ({ pageContext: { locale }, ...props }: HomepageData): ReactElement => {
   const { homepageData: data } = props.data
   const { edges: opensourceProjects } = props.data.openSource
+
+  console.log(props)
 
   return (
     <Layout locale={locale}>
@@ -39,7 +43,7 @@ const IndexPage = ({ pageContext: { locale }, ...props }: HomepageData): ReactEl
       <Text locale={locale}>CV</Text>
       <Timeline locale={locale} />
       <Separator distance="large" />
-      <Text locale={locale}>PROJECTS</Text>
+      <Text locale={locale}>{i18n[locale].textProjects}</Text>
       <Separator distance="small" />
       <ProjectsContainer locale={locale} />
       <Separator distance="large" />
@@ -106,6 +110,19 @@ export const pageQuery = graphql`
       }
     }
     openSource: allMarkdownRemark(filter: { frontmatter: { pageKey: { eq: "opensource" } } }) {
+      edges {
+        node {
+          id
+          fileAbsolutePath
+          frontmatter {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+    projects: allMarkdownRemark(filter: { frontmatter: { pageKey: { eq: "project" } } }) {
       edges {
         node {
           id

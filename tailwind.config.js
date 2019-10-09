@@ -10,6 +10,9 @@ module.exports = {
       display: ['sans mono', 'sans-serif'],
       body: ['sans mono', 'sans-serif'],
     },
+    minHeight: {
+      5: '80px',
+    },
     extend: {},
   },
 }

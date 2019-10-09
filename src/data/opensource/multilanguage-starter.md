@@ -1,7 +1,7 @@
 ---
 pageKey: opensource
 title: GATSBY NETLIFYCMS MULTILANGUAGE STARTER
-link: www.krimould.com
+link: https://github.com/karimould/minimal-multi-language-gatsby-starter-netlify-cms
 tags:
   - REACT
   - GATSBYJS
