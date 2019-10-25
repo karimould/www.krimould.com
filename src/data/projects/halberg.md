@@ -1,6 +1,7 @@
 ---
 pageKey: project
 title: halberg
+order: 2
 img: halberg.png
 tags:
   - REACT

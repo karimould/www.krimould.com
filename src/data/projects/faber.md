@@ -1,6 +1,7 @@
 ---
 pageKey: project
-title: IKS
+title: faber
+order: 5
 link: https://iks-hannover.de/
 img: faber.png
 tags:

@@ -31,8 +31,7 @@ interface HomepageData {
 const IndexPage = ({ pageContext: { locale }, ...props }: HomepageData): ReactElement => {
   const { homepageData: data } = props.data
   const { edges: opensourceProjects } = props.data.openSource
-
-  console.log(props)
+  const { projects } = props.data
 
   return (
     <Layout locale={locale}>
@@ -45,7 +44,7 @@ const IndexPage = ({ pageContext: { locale }, ...props }: HomepageData): ReactEl
       <Separator distance="large" />
       <Text locale={locale}>{i18n[locale].textProjects}</Text>
       <Separator distance="small" />
-      <ProjectsContainer locale={locale} />
+      <ProjectsContainer locale={locale} projects={projects} />
       <Separator distance="large" />
       <Text locale={locale}>TECH I WORKED WITH</Text>
       <Separator distance="small" />
@@ -129,6 +128,7 @@ export const pageQuery = graphql`
           fileAbsolutePath
           frontmatter {
             title
+            order
             link
             tags
           }

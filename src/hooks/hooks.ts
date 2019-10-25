@@ -38,7 +38,7 @@ export const useScrollDirection = (): string => {
   return scrollDirection
 }
 
-export const useOnClickOutside = (onClick: Function, disabled: boolean): RefObject => {
+export const useOnClickOutside = (onClick: () => void, disabled: boolean): RefObject => {
   const ref = useRef()
   const checkForClick = (e: Event): void => {
     if (ref.current && !ref.current.contains(e.target)) {
