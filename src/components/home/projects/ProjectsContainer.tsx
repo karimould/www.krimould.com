@@ -19,25 +19,28 @@ interface Project {
       order: number
       img?: string
       link?: string
-      tags?: string[]
+      tags: string[]
     }
   }
 }
 
 const ProjectsContainer = ({ locale, projects }: ProjectProps): JSX.Element => {
   const [activeProject, changeActiveProject] = useState(0)
-  const elems = []
+  const elems: JSX.Element[] = []
 
   projects.edges.sort((a: Project, b: Project): number => {
     return a.node.frontmatter.order - b.node.frontmatter.order
   })
 
-  for (var i = 0; i < 6; i++) {
-    elems.push(<Project locale={locale} index={i} />)
-  }
+  projects.edges.map((p: Project, index: number): void => {
+    const { frontmatter: project } = p.node
+    elems.push(<Project locale={locale} index={index} project={project} />)
+  })
 
   const getActiveItemCSS = (key: number): string => {
-    return key === activeProject ? 'p-5 bg-black text-white mr-20 tracking-widest' : 'p-5 mr-20 tracking-widest'
+    return key === activeProject
+      ? 'p-5 bg-black text-white mr-20 tracking-widest uppercase'
+      : 'p-5 mr-20 tracking-widest uppercase'
   }
 
   return (

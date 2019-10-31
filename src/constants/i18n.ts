@@ -21,6 +21,8 @@ export const i18n = {
       { dateStart: 'oct / 18', dateEnd: 'oct / 19', emoji: '🖥', text: 'FULLSTACK DEVELOPER AT DIEVISOn HANNOVER' },
       { dateStart: 'oct / 19', dateEnd: 'now', emoji: '💻', text: 'FREELANCING AS FULLSTACK DEVELOPER' },
     ],
+    firstProject:
+      'DUE TO CLIENT NDA’S, I’M NOT ABLE TO PUBLICLY DISPLAY ALL OF MY WORK. IF YOU WOULD LIKE TO SEE ALL PROJECTS I WORKED ON, FEEL FREE TO CONTACT ME.',
     techList: [
       { heading: 'FRONTEND', listData: ['JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'VUEJS', 'GATSBY'] },
       { heading: 'BACKEND', listData: ['JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'VUEJS', 'GATSBY'] },
@@ -50,6 +52,8 @@ export const i18n = {
       { dateStart: 'okt / 18', dateEnd: 'okt / 19', emoji: '🖥', text: 'FULLSTACK ENTWICKLUNG BEI DIEVISOn HANNOVER' },
       { dateStart: 'okt / 19', dateEnd: 'now', emoji: '💻', text: 'FREELANCING ALS FULLSTACK DEVELOPER' },
     ],
+    firstProject:
+      'DEUTSCH DUE TO CLIENT NDA’S, I’M NOT ABLE TO PUBLICLY DISPLAY ALL OF MY WORK. IF YOU WOULD LIKE TO SEE ALL PROJECTS I WORKED ON, FEEL FREE TO CONTACT ME.',
     techList: [
       { heading: 'FRONTEND', listData: ['JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'VUEJS', 'GATSBY'] },
       { heading: 'BACKEND', listData: ['JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'VUEJS', 'GATSBY'] },

@@ -128,6 +128,7 @@ export const pageQuery = graphql`
           fileAbsolutePath
           frontmatter {
             title
+            img
             order
             link
             tags
