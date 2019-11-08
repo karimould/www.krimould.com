@@ -37,7 +37,9 @@ const IndexPage = ({ pageContext: { locale }, ...props }: HomepageData): ReactEl
     <Layout locale={locale}>
       <SEO lang={locale} metaDescription={data.frontmatter.seo_desc} title={data.frontmatter.seo_title} />
       <Separator distance="large" />
-      <Vim black locale={locale} />
+      <Vim black>
+        <p>{i18n[locale].about}</p>
+      </Vim>
       <Separator distance="large" />
       <Text locale={locale}>CV</Text>
       <Timeline locale={locale} />

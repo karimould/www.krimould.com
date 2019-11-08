@@ -1,5 +1,8 @@
 export const i18n = {
   en: {
+    about:
+      'Hi my name is Karim Ould Mahieddine \n I`m a software enginner currently based in Hanover.\n' +
+      'TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT',
     cv: 'cv',
     cvDownload: 'DOWNLOAD CV AS PDF',
     textProjects: 'projects',
@@ -31,6 +34,7 @@ export const i18n = {
     ],
   },
   de: {
+    about: 'Hi ich bin Karim Ould Mahieddine\n ',
     cv: 'lebeneslauf',
     cvDownload: 'DOWNLOAD LEBENSLAUF ALS PDF',
     textProjects: 'projekte',
@@ -53,7 +57,7 @@ export const i18n = {
       { dateStart: 'okt / 19', dateEnd: 'now', emoji: '💻', text: 'FREELANCING ALS FULLSTACK DEVELOPER' },
     ],
     firstProject:
-      'DEUTSCH DUE TO CLIENT NDA’S, I’M NOT ABLE TO PUBLICLY DISPLAY ALL OF MY WORK. IF YOU WOULD LIKE TO SEE ALL PROJECTS I WORKED ON, FEEL FREE TO CONTACT ME.',
+      'AUFGRUND VON KUNDENVEREINBARUNGEN KANN ICH NICHT ALLE PROJEKTEN AN WELCHEN ICH GEARBEITET HABE ÖFFENTLICH ZUR SCHAU STELLEN. FÜR EINE LISTE MIT PROJEKTEN AN WELCHEN ICH GEARBEITET HABE BITTE EINE E-MAIL SCHREIBEN.',
     techList: [
       { heading: 'FRONTEND', listData: ['JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'VUEJS', 'GATSBY'] },
       { heading: 'BACKEND', listData: ['JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'VUEJS', 'GATSBY'] },

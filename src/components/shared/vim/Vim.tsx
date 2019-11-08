@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { ReactChild } from 'react'
 import './vim.scss'
 
 interface VimProps {
-  locale: string
   black?: boolean
+  children: ReactChild
 }
 
-const Vim = ({ locale, black }: VimProps): JSX.Element => {
+const Vim = ({ black, children }: VimProps): JSX.Element => {
+  let chars = children.props.children.length
+  let lines = (children.props.children.match(/\n/g) || []).length
   return (
     <div className="container-normal">
       <div className={`p-3 ${black ? 'text-white bg-black' : ''} font-mono rounded-lg`}>
@@ -15,18 +17,8 @@ const Vim = ({ locale, black }: VimProps): JSX.Element => {
           <div className="w-4 h-4 bg-gray-600 mr-2 rounded-full" />
           <div className="w-4 h-4 bg-green-600 mr-2 rounded-full" />
         </div>
-        <div className="terminal mt-5">
-          HI IAM KARIM OULD MAHIEDDINE.
-          <br />
-          IAM A FULLSTACK DEVELOPER, CURRENTLY BASED IN BERLIN.
-          <br />
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          <br />
-          invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-          <br />
-          At vero eos et accusam et justo duo dolores et ea rebum.
-          <br />
-          Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <div className="terminal mt-5 whitespace-pre-line">
+          {children}
           <p>~</p>
           <p>~</p>
           <p>~</p>
@@ -35,7 +27,7 @@ const Vim = ({ locale, black }: VimProps): JSX.Element => {
           <p>~</p>
           <p>~</p>
           <p>~</p>
-          “about.txt” 7L, 229C
+          “about.txt” {lines}L, {chars}C
         </div>
       </div>
     </div>
