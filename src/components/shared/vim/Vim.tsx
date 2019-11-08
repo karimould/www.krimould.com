@@ -7,8 +7,11 @@ interface VimProps {
 }
 
 const Vim = ({ black, children }: VimProps): JSX.Element => {
-  let chars = children.props.children.length
-  let lines = (children.props.children.match(/\n/g) || []).length
+  /*ToDo
+   * Fix interface to match the props
+   */
+  let chars: number = children.props.children.length
+  let lines: number = (children.props.children.match(/\n/g) || []).length
   return (
     <div className="container-normal">
       <div className={`p-3 ${black ? 'text-white bg-black' : ''} font-mono rounded-lg`}>
