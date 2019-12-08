@@ -36,9 +36,9 @@ const Timeline = ({ locale }: TimelineProps): JSX.Element => {
           )}
         </div>
       </div>
-      <div className="mt-10">
+      {/* <div className="mt-10">
         <a>DOWNLOAD CV AS PDF</a>
-      </div>
+      </div> */}
     </div>
   )
 }

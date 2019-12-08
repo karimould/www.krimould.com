@@ -1,20 +1,15 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "*": ["types/*"]
-    },
-    "outDir": "./dist/",
-    "suppressImplicitAnyIndexErrors": true,
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
-    "module": "es6",
-    "target": "es5",
+    "module": "commonjs",
+    "target": "esnext",
     "jsx": "react",
-    "allowJs": true,
+    "lib": ["dom", "esnext"],
     "strict": true,
-    "resolveJsonModule": true
-  }
+    "noEmit": true,
+    // "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": false
+  },
+  "exclude": ["node_modules", "public", ".cache"]
 }

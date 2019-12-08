@@ -128,7 +128,7 @@ const ClickCTA = ({ locale, isClicked, outsideClick }: CTAFormProps): JSX.Elemen
             <br />
             <textarea className="w-full mb-5" id="text" name="text" />
             <br />
-            <input className="p-2 w-full text-black " type="submit" value="Senden" />
+            <input className="p-2 w-full text-black bg-white" type="submit" value="Senden" />
           </form>
         </div>
       </div>
