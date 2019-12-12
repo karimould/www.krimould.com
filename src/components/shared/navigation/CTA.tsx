@@ -112,21 +112,21 @@ const ClickCTA = ({ locale, isClicked, outsideClick }: CTAFormProps): JSX.Elemen
           <form onSubmit={submitHandler}>
             <label htmlFor="fname">Name</label>
             <br />
-            <input className="w-full mb-3" mb-10 type="text" id="name" name="name" />
+            <input className="w-full mb-3 text-black" mb-10 type="text" id="name" name="name" />
             <br />
             <label htmlFor="fname">E-Mail</label>
             <br />
-            <input className="w-full mb-3" type="email" id="email" name="email" />
+            <input className="w-full mb-3 text-black" type="email" id="email" name="email" />
             <br />
             <label htmlFor="fname">Phone</label>
             <br />
-            <input className="w-full mb-3" type="phone" id="phone" name="phone" />
+            <input className="w-full mb-3 text-black" type="phone" id="phone" name="phone" />
             <br />
             <label className="" htmlFor="text">
               Text
             </label>
             <br />
-            <textarea className="w-full mb-5" id="text" name="text" />
+            <textarea className="w-full mb-5 text-black" id="text" name="text" />
             <br />
             <input className="p-2 w-full text-black bg-white" type="submit" value="Senden" />
           </form>

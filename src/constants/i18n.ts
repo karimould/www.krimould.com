@@ -4,7 +4,8 @@ export const i18n: { [key: string]: any } = {
       "Hi my name is Karim Ould Mahieddine, \n I'm a software enginner currently based in Hanover.\n" +
       "I'm a huge entusiast of new technologies and everything that happens around the World Wide Web.\n" +
       "In my freetime im diving new technologies, right now it's the JAMStack and Server Side Swift with Swift 5.\n" +
-      '',
+      '\n' +
+      'You can scroll down to see my CV\n',
     cv: 'cv',
     cvDownload: 'DOWNLOAD CV AS PDF',
     textProjects: 'projects',
@@ -44,7 +45,10 @@ export const i18n: { [key: string]: any } = {
     contactText: 'YOU CAN SEND ME A QUICK EMAIL IF YOU DONT WANT TO FILL OUT THIS FORM. JUST DROP ME A LINE AT ',
   },
   de: {
-    about: 'Hi ich bin Karim Ould Mahieddine\n ',
+    about:
+      'Hallo, ich bin Karim Ould Mahieddine,\n ich bin ein Softwareeintwickler und wohne zur Zeit in Hannover.\n' +
+      'Ich bin habe ein großes Intresse an neuen Technologien und alles, was im World Wide Web passiert.\n' +
+      'In meiner Freizeit beschäftige ich mich mit diesen neuen Technologien, im Moment ist es das JAMStack und Server Side Swift mit Swift 5',
     cv: 'lebeneslauf',
     cvDownload: 'DOWNLOAD LEBENSLAUF ALS PDF',
     textProjects: 'projekte',
@@ -61,18 +65,26 @@ export const i18n: { [key: string]: any } = {
         emoji: '🎓',
         text: 'BACHELOR IN WIRTSCHAFTSINFORMATIK AN DER UNIVERSITÄT HILDESHEIM',
       },
-      { dateStart: 'feb / 17', dateEnd: 'okt / 18', emoji: '💻 ', text: 'FREELANCING ALS FRONTEND ENTWICKLER' },
+      { dateStart: 'feb / 17', dateEnd: 'okt / 18', emoji: '💻 ', text: 'FREELANCING ALS FULLSTACK ENTWICKLER' },
       { dateStart: 'feb / 18', dateEnd: '', emoji: '🕶', text: 'MITGRÜDUNG VON immajung.com' },
       { dateStart: 'okt / 18', dateEnd: 'okt / 19', emoji: '🖥', text: 'FULLSTACK ENTWICKLUNG BEI DIEVISION HANNOVER' },
       { dateStart: 'okt / 19', dateEnd: 'now', emoji: '💻', text: 'FREELANCING ALS FULLSTACK DEVELOPER' },
     ],
     firstProject:
-      'AUFGRUND VON KUNDENVEREINBARUNGEN KANN ICH NICHT ALLE PROJEKTEN AN WELCHEN ICH GEARBEITET HABE ÖFFENTLICH ZUR SCHAU STELLEN. FÜR EINE AUSFÜHRLICHERE ÜBERSICHT MIT PROJEKTEN AN WELCHEN ICH GEARBEITET HABE KANN GERNE ANGEFRAGT WERDEN.',
+      'AUFGRUND VON KUNDENVEREINBARUNGEN KANN ICH NICHT ALLE PROJEKTE, AN WELCHEN ICH GEARBEITET HABE, ÖFFENTLICH ZUR SCHAU STELLEN. FÜR EINE AUSFÜHRLICHERE ÜBERSICHT MIT PROJEKTEN, AN WELCHEN ICH GEARBEITET HABE KANN GERNE ANGEFRAGT WERDEN.',
+    techListHeading: 'Erfahrungen',
+    techListText: 'Hier sind einige Technologien und andere Dinge, mit denen ich in letzter Zeit gearbeitet habe.',
     techList: [
       { heading: 'FRONTEND', listData: ['JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'VUEJS', 'GATSBY'] },
       { heading: 'BACKEND', listData: ['JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'VUEJS', 'GATSBY'] },
       { heading: 'DEV', listData: ['JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'VUEJS', 'GATSBY'] },
       { heading: 'SOFTWARE', listData: ['JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'VUEJS', 'GATSBY'] },
     ],
+    openSourceHeading: 'Einige andere Projekte, die ich erwähnen möchte',
+    openSourceText: 'Projekte, die ich in meiner Freizeit durchführe oder durchführen werde.',
+    contactFormHeading: 'Kontakt',
+    contactFormText: 'verfügbar ab dem 01.01.2020, remote und in Europa',
+    contactText:
+      'DU KANNST MIR EINE KURZE E-MAIL SCHICKEN, WENN DU DIESES FORMULAR NICHT AUSFÜLLEN MÖCHTEST. SCHREIB MIR EINFACH EINE NACHRICHT AN  ',
   },
 }
