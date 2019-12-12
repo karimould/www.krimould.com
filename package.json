@@ -4,6 +4,7 @@
   "version": "1.2.0",
   "author": "Karim Ould Mahieddine",
   "dependencies": {
+    "@types/react": "^16.9.16",
     "@types/react-helmet": "^5.0.8",
     "gatsby": "^2.13.31",
     "gatsby-image": "^2.2.6",

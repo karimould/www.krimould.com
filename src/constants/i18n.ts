@@ -1,9 +1,9 @@
-export const i18n = {
+export const i18n: { [key: string]: any } = {
   en: {
     about:
       "Hi my name is Karim Ould Mahieddine, \n I'm a software enginner currently based in Hanover.\n" +
-      "I'am a huge entusiast of new technologie and everything that happens around the World Wide Web.\n" +
-      'In my freetime im diving new technologies, right now its the JAMStack and Server Side Swift with Swift 5\n' +
+      "I'm a huge entusiast of new technologies and everything that happens around the World Wide Web.\n" +
+      "In my freetime im diving new technologies, right now it's the JAMStack and Server Side Swift with Swift 5.\n" +
       '',
     cv: 'cv',
     cvDownload: 'DOWNLOAD CV AS PDF',

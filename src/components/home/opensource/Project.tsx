@@ -7,7 +7,6 @@ interface ProjectProps {
   tags: string[]
 }
 
-//
 const Project = ({ title, link, tags }: ProjectProps): JSX.Element => {
   return (
     <div className="md:w-2/6 bg-black text-white p-5 md:mr-5 mt-5">

@@ -5,8 +5,13 @@ interface MenuProps {
   locale: string
 }
 
+interface MenuState {
+  isMenuOpen: boolean
+  menuText: string
+}
+
 const Menu = ({ locale }: MenuProps): JSX.Element => {
-  const [isOpen, setOpen] = useState({ isMenuOpen: false, menuText: 'MENU' })
+  const [isOpen, setOpen] = useState<MenuState>({ isMenuOpen: false, menuText: 'MENU' })
   //for the useOnClickOutside hook
 
   const checkMenu = (): void => {
@@ -28,6 +33,18 @@ const Menu = ({ locale }: MenuProps): JSX.Element => {
         <Link to="/">
           <li>
             <span className="term" />
+            XING
+          </li>
+        </Link>
+        <Link to="/">
+          <li>
+            <span className="term" />
+            LINKEDIN
+          </li>
+        </Link>
+        {/* <Link to="/">
+          <li>
+            <span className="term" />
             BLOG
           </li>
         </Link>
@@ -36,7 +53,7 @@ const Menu = ({ locale }: MenuProps): JSX.Element => {
             <span className="term" />
             DIGITAL-GARDEN
           </li>
-        </Link>
+        </Link> */}
         <Link to="/">
           <li>
             <span className="term" />

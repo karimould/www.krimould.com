@@ -17,10 +17,10 @@ interface CTAFormProps {
 }
 
 const CTA = ({ locale }: CTAProps): JSX.Element => {
-  const [isHovered, setHoveredStatus] = useState(false)
-  const [isClicked, setClickStatus] = useState(false)
+  const [isHovered, setHoveredStatus] = useState<boolean>(false)
+  const [isClicked, setClickStatus] = useState<boolean>(false)
   //for the useOnClickOutside hook
-  const [isDisabled, setIsDisabled] = useState(true)
+  const [isDisabled, setIsDisabled] = useState<boolean>(true)
 
   function openModal(): void {
     setIsDisabled(false)

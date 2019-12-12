@@ -4,13 +4,19 @@ import Project from './Project'
 import './opensource.scss'
 
 interface OpensourceProps {
-  projects: ProjectProps[]
+  projects: OpensourceProject[]
 }
 
-interface ProjectProps {
+export interface OpensourceProject {
   title: string
   link: string
-  tags: string[]
+  node: {
+    frontmatter: {
+      title: string
+      link: string
+      tags: string[]
+    }
+  }
 }
 
 const OpensourceContainer = ({ projects }: OpensourceProps): JSX.Element => {

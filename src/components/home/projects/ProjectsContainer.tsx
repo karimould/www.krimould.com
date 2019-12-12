@@ -6,13 +6,11 @@ import './projects.scss'
 interface ProjectProps {
   locale: string
   projects: {
-    edges: {
-      project: Project[]
-    }
+    edges: Array<Project>
   }
 }
 
-interface Project {
+export interface Project {
   node: {
     frontmatter: {
       title: string
@@ -25,7 +23,7 @@ interface Project {
 }
 
 const ProjectsContainer = ({ locale, projects }: ProjectProps): JSX.Element => {
-  const [activeProject, changeActiveProject] = useState(0)
+  const [activeProject, changeActiveProject] = useState<number>(0)
   const elems: JSX.Element[] = []
 
   projects.edges.sort((a: Project, b: Project): number => {

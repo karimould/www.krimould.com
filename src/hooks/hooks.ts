@@ -3,8 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 /*
  * ToDo:
  * - retrun types
- * - Object is possibly 'undefined' line 17
- * - line 16
+ * - ref readPnly (l 42)
  */
 
 interface RefObject {
@@ -12,14 +11,13 @@ interface RefObject {
 }
 
 export const useScrollDirection = (): string => {
-  const [lastScrollPosition, setLastScrollPosition] = useState(0)
-  //check typeof document for gatsby build -> find better solution
-  const [bodyOffset, setBodyOffset] = useState(
+  const [lastScrollPosition, setLastScrollPosition] = useState<number>(0)
+  const [bodyOffset, setBodyOffset] = useState<ClientRect | null>(
     typeof document !== 'undefined' ? document.body.getBoundingClientRect() : null,
   )
-  const [scrollDirection, setScrollDirection] = useState('NONE')
+  const [scrollDirection, setScrollDirection] = useState<string>('NONE')
 
-  const listener = () => {
+  const listener = (): void => {
     if (bodyOffset !== null) {
       setBodyOffset(document.body.getBoundingClientRect())
       setScrollDirection(lastScrollPosition > -bodyOffset.top || bodyOffset.top >= 0 ? 'UP' : 'DOWN')

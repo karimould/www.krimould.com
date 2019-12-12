@@ -39,7 +39,7 @@ const Image = ({ center = false, imageName, maxWidth = 500, className = '' }: Pr
         return null
       }
       return (
-        <div style={{ margin: center ? '0 auto' : null, maxWidth: maxWidth }}>
+        <div style={{ margin: center ? '0 auto' : 0, maxWidth: maxWidth }}>
           <Img className={className} fluid={image.node.fluid} />
         </div>
       )

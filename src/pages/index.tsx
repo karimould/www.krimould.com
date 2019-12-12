@@ -6,8 +6,8 @@ import Separator from '../components/shared/separator/Separator'
 import Text from '../components/shared/text/Text'
 import List from '../components/shared/list/List'
 import Timeline from '../components/home/timeline/Timeline'
-import ProjectsContainer from '../components/home/projects/ProjectsContainer'
-import Opensource from '../components/home/opensource/Opensource'
+import ProjectsContainer, { Project } from '../components/home/projects/ProjectsContainer'
+import Opensource, { OpensourceProject } from '../components/home/opensource/Opensource'
 import SEO from '../components/util/seo/Seo'
 import { i18n } from '../constants/i18n'
 import ContactForm from '../components/shared/contact/Form'
@@ -20,10 +20,18 @@ interface HomepageData {
     slug: string
   }
   data: {
-    frontmatter: {
-      pageKey: string
-      seo_title: string
-      seo_desc: string
+    homepageData: {
+      frontmatter: {
+        pageKey: string
+        seo_title: string
+        seo_desc: string
+      }
+    }
+    openSource: {
+      edges: OpensourceProject[]
+    }
+    projects: {
+      edges: Project[]
     }
   }
 }

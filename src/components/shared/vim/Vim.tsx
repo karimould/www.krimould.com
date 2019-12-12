@@ -10,6 +10,8 @@ const Vim = ({ black, children }: VimProps): JSX.Element => {
   /*ToDo
    * Fix interface to match the props
    */
+  console.log('CHILDREN:', children)
+
   let chars: number = children.props.children.length
   let lines: number = (children.props.children.match(/\n/g) || []).length
   return (
