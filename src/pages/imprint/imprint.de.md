@@ -1,6 +1,6 @@
 ---
 pageKey: page_imprint
-locale: en
+locale: de
 seo_title: Karim Ould Mahieddine -  Freelance Full Stack Engineer
 seo_desc: >-
   Imprint page of Karim Ould Mahieddine. Feel free to contact me at any time.
