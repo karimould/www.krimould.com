@@ -46,8 +46,8 @@ export const i18n: { [key: string]: any } = {
   },
   de: {
     about:
-      'Hallo, ich bin Karim Ould Mahieddine,\n ich bin ein Softwareeintwickler und wohne zur Zeit in Hannover.\n' +
-      'Ich bin habe ein großes Intresse an neuen Technologien und alles, was im World Wide Web passiert.\n' +
+      'Hallo, ich bin Karim Ould Mahieddine,\n ich bin Softwareeintwickler und wohne zur Zeit in Hannover.\n' +
+      'Ich habe ein großes Intresse an neuen Technologien und alles, was im World Wide Web passiert.\n' +
       'In meiner Freizeit beschäftige ich mich mit diesen neuen Technologien, im Moment ist es das JAMStack und Server Side Swift mit Swift 5',
     cv: 'lebeneslauf',
     cvDownload: 'DOWNLOAD LEBENSLAUF ALS PDF',
@@ -81,9 +81,9 @@ export const i18n: { [key: string]: any } = {
       { heading: 'SOFTWARE', listData: ['JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'VUEJS', 'GATSBY'] },
     ],
     openSourceHeading: 'Einige andere Projekte, die ich erwähnen möchte',
-    openSourceText: 'Projekte, die ich in meiner Freizeit durchführe oder durchführen werde.',
+    openSourceText: 'Projekte, an welchen ich in meiner Freizeit arbeite',
     contactFormHeading: 'Kontakt',
-    contactFormText: 'verfügbar ab dem 01.01.2020, remote und in Europa',
+    contactFormText: 'verfügbar ab dem 01.01.2020',
     contactText:
       'DU KANNST MIR EINE KURZE E-MAIL SCHICKEN, WENN DU DIESES FORMULAR NICHT AUSFÜLLEN MÖCHTEST. SCHREIB MIR EINFACH EINE NACHRICHT AN  ',
   },
