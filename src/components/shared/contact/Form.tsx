@@ -6,7 +6,16 @@ const ContactForm = (): JSX.Element => {
   }
 
   return (
-    <form className="md:pr-20" onSubmit={submitHandler} name="contact" method="POST" data-netlify="true">
+    <form
+      className="md:pr-20"
+      onSubmit={submitHandler}
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="bot-field" />
+      <input type="hidden" name="form-name" value="contact" />
       <label htmlFor="fname">Name</label>
       <br />
       <input
