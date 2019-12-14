@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 const Footer = (): JSX.Element => {
   return (
@@ -56,14 +57,19 @@ const Footer = (): JSX.Element => {
               </a>
             </li> */}
             <li>
-              <a href="www.krimould.com" title="to imprint page" rel="noopener noreferrer" target="_blank">
-                IMPRINT
-              </a>
+              <Link to="/" title="to home page" rel="noopener noreferrer" target="_blank">
+                HOME
+              </Link>
             </li>
             <li>
-              <a href="www.krimould.com" title="to pricacy page" rel="noopener noreferrer" target="_blank">
+              <Link to="/imprint" title="to imprint page" rel="noopener noreferrer" target="_blank">
+                IMPRINT
+              </Link>
+            </li>
+            <li>
+              <Link to="/privacy" title="to pricacy page" rel="noopener noreferrer" target="_blank">
                 PRIVACY
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

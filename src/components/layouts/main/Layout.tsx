@@ -6,14 +6,15 @@ import Footer from '../../shared/footer/Footer'
 interface Props {
   children: ReactNode
   locale: string
+  legalpage?: boolean
 }
 
-const Layout = ({ children, locale }: Props): JSX.Element => {
+const Layout = ({ children, locale, legalpage }: Props): JSX.Element => {
   return (
     <>
       <Navigation locale={locale} />
-      <main className="container-normal uppercase">{children}</main>
-      <Footer locale={locale} />
+      <main className={`container-normal ${legalpage ? '' : 'uppercase'}`}>{children}</main>
+      <Footer />
     </>
   )
 }
