@@ -123,12 +123,14 @@ const ClickCTA = ({ locale, isClicked, outsideClick }: CTAFormProps): JSX.Elemen
             <input className="w-full mb-3 text-black" type="phone" id="phone" name="phone" />
             <br />
             <label className="" htmlFor="text">
-              Text
+              Message
             </label>
             <br />
             <textarea className="w-full mb-5 text-black" id="text" name="text" />
             <br />
-            <input className="p-2 w-full text-black bg-white" type="submit" value="Senden" />
+            <button className="p-2 cursor-pointer w-full text-black bg-white" type="submit">
+              SEND
+            </button>
           </form>
         </div>
       </div>

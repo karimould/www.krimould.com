@@ -45,11 +45,12 @@ const ContactForm = (): JSX.Element => {
         name="text"
       />
       <br />
-      <input
-        className="mb-3 bg-black appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none"
+      <button
+        className="mb-3 cursor-pointer bg-black appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none"
         type="submit"
-        value="Senden"
-      />
+      >
+        SEND
+      </button>
     </form>
   )
 }
