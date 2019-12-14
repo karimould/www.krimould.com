@@ -8,7 +8,7 @@ export const i18n: { [key: string]: any } = {
       'You can scroll down to see my CV\n',
     cv: 'cv',
     cvDownload: 'DOWNLOAD CV AS PDF',
-    textProjects: 'projects',
+    textProjects: 'CLIENTS',
     timeline: [
       {
         dateStart: 'feb / 15',
@@ -51,7 +51,7 @@ export const i18n: { [key: string]: any } = {
       'In meiner Freizeit beschäftige ich mich mit diesen neuen Technologien, im Moment ist es das JAMStack und Server Side Swift mit Swift 5',
     cv: 'lebeneslauf',
     cvDownload: 'DOWNLOAD LEBENSLAUF ALS PDF',
-    textProjects: 'projekte',
+    textProjects: 'Kunden',
     timeline: [
       {
         dateStart: 'feb / 15',

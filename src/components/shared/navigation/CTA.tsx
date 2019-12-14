@@ -109,8 +109,8 @@ const ClickCTA = ({ locale, isClicked, outsideClick }: CTAFormProps): JSX.Elemen
     >
       <div className="cta-form-container relative w-full text-white" style={{ opacity: opacity }}>
         <div className="form pt-16">
-          <form onSubmit={submitHandler}>
-            <label htmlFor="fname">Name</label>
+          <form onSubmit={submitHandler} name="contact" method="POST" data-netlify="true">
+            ><label htmlFor="fname">Name</label>
             <br />
             <input className="w-full mb-3 text-black" mb-10 type="text" id="name" name="name" />
             <br />
