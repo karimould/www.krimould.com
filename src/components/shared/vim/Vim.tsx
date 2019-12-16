@@ -22,7 +22,7 @@ const Vim = ({ black, children }: VimProps): JSX.Element => {
           <div className="w-4 h-4 bg-gray-600 mr-2 rounded-full" />
           <div className="w-4 h-4 bg-green-600 mr-2 rounded-full" />
         </div>
-        <div className="terminal mt-5 whitespace-pre-line">
+        <div className="terminal mt-5 whitespace-pre-line tracking-wide">
           {children}
           <p>~</p>
           <p>~</p>
