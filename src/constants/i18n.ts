@@ -3,7 +3,7 @@ export const i18n: { [key: string]: any } = {
     about:
       "Hi my name is Karim Ould Mahieddine, \n I'm a freelance software enginner currently based in Hanover.\n" +
       "I'm a huge entusiast of new technologies and everything that happens around the World Wide Web.\n" +
-      "In my freetime im diving new technologies, right now it's the JAMStack and Server Side Swift with Swift 5.\n" +
+      "In my freetime im diving new technologies, right now it's webassembly with golang.\n" +
       '\n' +
       'You can scroll down to see my CV, projects and clients I worked with.\n',
     cv: 'cv',
@@ -34,7 +34,7 @@ export const i18n: { [key: string]: any } = {
     techListText: "Here are some technologies and other things I've been working with lately.",
     techList: [
       { heading: 'FRONTEND', listData: ['JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'NEXT', 'GATSBY', 'TAILWIND', 'VUEJS'] },
-      { heading: 'BACKEND', listData: ['NODEJS', 'TYPESCRIPT', 'REST', 'GRAPHQL', 'EXPRESS', 'JAVA', 'Spring', 'ROR'] },
+      { heading: 'BACKEND', listData: ['NODEJS', 'TYPESCRIPT', 'REST', 'GRAPHQL', 'EXPRESS', 'JAVA', 'Spring', 'GO'] },
       { heading: 'DEV-OPS', listData: ['DOCKER', 'SERVERLESS', 'AWS', 'NETLIFY', 'GitHub-Actions', 'CI'] },
       { heading: 'Miscellaneous', listData: ['JIRA', 'SCRUM', 'UX/UI-DESIGN', 'QA', 'Snipcart'] },
     ],
@@ -49,7 +49,7 @@ export const i18n: { [key: string]: any } = {
       'Hallo, ich bin Karim Ould Mahieddine,\n \n  arbeite als freiberuflicher Softwareentwickler und wohne zurzeit in Hannover.\n' +
       'Ich habe ein großes Intresse an neuen Technologien und alles, was im World Wide Web passiert.\n' +
       'In meiner Freizeit beschäftige ich mich mit diesen neuen Technologien,\n' +
-      'wobei ich mich im Moment mit dem JAMStack und Server Side Swift mit Swift 5 beschäftige.\n' +
+      'wobei ich mich im Moment mit webassembly in Kombination mit golang beschäftige.\n' +
       '\n' +
       'Weiter unten sind mein Lebenslauf, Projekte und Kunden mit welchen ich zusammen gearbeitet habe zu finden. \n',
     cv: 'lebeneslauf',
@@ -79,7 +79,7 @@ export const i18n: { [key: string]: any } = {
     techListText: 'Hier sind einige Technologien und andere Dinge, mit denen ich in letzter Zeit gearbeitet habe.',
     techList: [
       { heading: 'FRONTEND', listData: ['JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'NEXT', 'GATSBY', 'TAILWIND', 'VUEJS'] },
-      { heading: 'BACKEND', listData: ['NODEJS', 'TYPESCRIPT', 'REST', 'GRAPHQL', 'EXPRESS', 'JAVA', 'Spring', 'ROR'] },
+      { heading: 'BACKEND', listData: ['NODEJS', 'TYPESCRIPT', 'REST', 'GRAPHQL', 'EXPRESS', 'JAVA', 'Spring', 'GO'] },
       { heading: 'DEV-OPS', listData: ['DOCKER', 'SERVERLESS', 'AWS', 'NETLIFY', 'GitHub-Actions', 'CI'] },
       { heading: 'SONSTIGES', listData: ['JIRA', 'SCRUM', 'UX/UI-DESIGN', 'QA', 'Snipcart'] },
     ],
