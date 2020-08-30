@@ -86,7 +86,7 @@ export const i18n: { [key: string]: any } = {
     openSourceHeading: 'Projekte',
     openSourceText: 'Projekte, an welchen ich in meiner Freizeit arbeite',
     contactFormHeading: 'Kontakt',
-    contactFormText: 'verfügbar ab dem 01.01.2020',
+    contactFormText: 'voraussichtlich verfügbar ab 2. Quartal 2021',
     contactText:
       'DU KANNST MIR EINE KURZE E-MAIL SCHICKEN, WENN DU DIESES FORMULAR NICHT AUSFÜLLEN MÖCHTEST. SCHREIB MIR EINFACH EINE NACHRICHT AN  ',
   },
