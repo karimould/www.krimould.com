@@ -37,6 +37,16 @@ const Menu = ({ locale }: MenuProps): JSX.Element => {
             </a>
           </li>
           <li>
+            <a href="https://blog.karimould.dev" title="to blog page" rel="noopener noreferrer" target="_blank">
+              BLOG
+            </a>
+          </li>
+          <li>
+            <a href="https://wiki.karimould.dev" title="to wiki page" rel="noopener noreferrer" target="_blank">
+              KNOWLEDGE BASE
+            </a>
+          </li>
+          <li>
             <a href="https://twitter.com/krimould" title="to twitter profil" rel="noopener noreferrer" target="_blank">
               TWITTER
             </a>

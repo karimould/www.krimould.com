@@ -46,16 +46,22 @@ const Footer = (): JSX.Element => {
         </div>
         <div className="w-full mt-3 md:w-2/6">
           <ul>
-            {/* <li>
-              <a href="www.krimould.com" title="to github page">
+            <li>
+              <a href="https://blog.karimould.dev" 
+                title="link to my blog" 
+                rel="noopener noreferrer"
+                target="_blank">
                 BLOG
               </a>
             </li>
             <li>
-              <a href="www.krimould.com" title="to github page">
-                DIGITAL-GARDEN
+              <a href="https://wiki.karimould.dev" 
+                title="link to my wiki"
+                rel="noopener noreferrer"
+                target="_blank">
+                KNOWLEDGE BASE
               </a>
-            </li> */}
+            </li>
             <li>
               <Link to="/" title="to home page" rel="noopener noreferrer" target="_blank">
                 HOME
